@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 mongoose
   .connect(
     // `mongodb+srv://dungldph38549: ${process.env.MONGO_DB}@cluster0.gyc0fo3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
-    `mongodb+srv://dungldph38549:${process.env.MONGO_DB}@cluster0.gyc0fo3.mongodb.net/?retryWrites=true&w=majority`
+    `${process.env.MONGO_DB}`
   )
   .then(() => {
     console.log("Connected to MongoDB");
